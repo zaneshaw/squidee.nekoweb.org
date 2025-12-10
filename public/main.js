@@ -44,9 +44,9 @@ let layout =
 					<a href="/updates.html" id="whats-new">
 						<h2>what's new?</h2>
 						<ul class="unstyled-ul">
+							<li>10-12-25 stuff page</li>
 							<li>23-11-25 guestbook!!!</li>
 							<li>10-11-25 gallery</li>
-							<li>09-11-25 bg music</li>
 						</ul>
 					</a>
 				</div>

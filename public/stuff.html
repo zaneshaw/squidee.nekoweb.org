@@ -7,16 +7,34 @@
 		<link rel="stylesheet" type="text/css" href="/style.css" />
 		<link rel="icon" href="/assets/images/zanesquid3_small.png" />
 		<style>
-			#stuff > div {
+			#stuff {
 				display: flex;
+				flex-direction: row;
 				gap: 10px;
+				padding-right: 10px;
 			}
 
-			#stuff > div > div {
+			#stuff * {
+				max-width: 100%;
+			}
+
+			#stuff p {
+				margin: 5px 0px;
+			}
+
+			#stuff .links {
 				display: flex;
+				gap: 10px;
+				float: right;
+			}
+
+			#stuff > div {
+				display: flex;
+				flex-direction: column;
 				gap: 10px;
 
 				flex-grow: 1;
+				flex-basis: 0;
 			}
 		</style>
 	</head>
@@ -29,11 +47,34 @@
 		<main id="stuff" data-maincontent>
 			<div>
 				<div class="container">
-					<h1>a</h1>
+					<h1>Fishcove 64</h1>
+					<p>secret n64 project.</p>
+					<img src="/assets/images/stuff/fishcove64.jpeg" alt="Fishcove64 blurred screenshot" />
 				</div>
-
 				<div class="container">
-					<h1>b</h1>
+					<h1>squidpaste</h1>
+					<p>free, anonymous service for hosting plain text. yummy. the server is closed source.</p>
+					<a href="https://paste.squidee.dev/" target="_blank"><img src="/assets/images/stuff/squidpaste.png" alt="squidpaste screenshot" /></a>
+					<div class="links">
+						<a href="https://github.com/zaneshaw/squidpaste" target="_blank" class="link">source</a>
+						<a href="https://paste.squidee.dev/" target="_blank" class="link">link</a>
+					</div>
+				</div>
+			</div>
+			<div>
+				<div class="container">
+					<h1>Liam Search</h1>
+					<p>a simple search engine for a streamer's stream transcripts.</p>
+					<a href="https://liamsear.ch/" target="_blank"><img src="/assets/images/stuff/liamsearch.jpeg" alt="Liam Search screenshot" /></a>
+					<div class="links">
+						<a href="https://github.com/zaneshaw/liam-search" target="_blank" class="link">source</a>
+						<a href="https://liamsear.ch/" target="_blank" class="link">link</a>
+					</div>
+				</div>
+				<div class="container">
+					<h1>Sanctuary 64</h1>
+					<p>demo i made to learn how to develop a game for the nintendo 64. not public.</p>
+					<img src="/assets/images/stuff/sanctuary64.jpeg" alt="Sanctuary 64 cartridge label" />
 				</div>
 			</div>
 		</main>
