@@ -7,7 +7,11 @@
 	text-align: left;
 	outline: 1px solid black;
 	overflow: hidden;
-	text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+	text-shadow:
+		-1px -1px 0 black,
+		1px -1px 0 black,
+		-1px 1px 0 black,
+		1px 1px 0 black;
 }
 
 .site-box * {

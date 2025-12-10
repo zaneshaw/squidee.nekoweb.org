@@ -200,7 +200,11 @@ nav > a {
 	z-index: 1;
 
 	transition-duration: 150ms;
-	transition-property: color, box-shadow, -webkit-box-shadow, -moz-box-shadow;
+	transition-property:
+		color,
+		box-shadow,
+		-webkit-box-shadow,
+		-moz-box-shadow;
 }
 
 nav > a:hover {
@@ -368,7 +372,9 @@ textarea {
 	right: 0;
 	background: linear-gradient(rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.1) 50%);
 	z-index: 2147483647;
-	background-size: 100% 2px, 3px 100%;
+	background-size:
+		100% 2px,
+		3px 100%;
 	pointer-events: none;
 }
 
@@ -387,7 +393,11 @@ textarea {
 	-webkit-filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.4));
 
 	transition-duration: 150ms;
-	transition-property: scale, transform, filter, -webkit-filter;
+	transition-property:
+		scale,
+		transform,
+		filter,
+		-webkit-filter;
 }
 
 #hero-image > img {
@@ -423,7 +433,9 @@ textarea {
 #email {
 	padding: 0px 5px;
 	user-select: none;
-	cursor: url("/assets/images/cursors/cursor_error.png") 7 7, not-allowed;
+	cursor:
+		url("/assets/images/cursors/cursor_error.png") 7 7,
+		not-allowed;
 }
 
 footer > #footer-center {
@@ -583,7 +595,9 @@ footer > #footer-center {
 	width: 16px;
 	height: 16px;
 	background: silver;
-	box-shadow: inset 1px 1px #dfdfdf, inset -1px -1px gray;
+	box-shadow:
+		inset 1px 1px #dfdfdf,
+		inset -1px -1px gray;
 	border: 1px solid;
 	border-color: silver #000 #000 silver;
 }
@@ -600,11 +614,15 @@ footer > #footer-center {
 }
 
 ::-webkit-scrollbar-thumb:vertical {
-	cursor: url("/assets/images/cursors/cursor_scrollv.png") 7 7, n-resize;
+	cursor:
+		url("/assets/images/cursors/cursor_scrollv.png") 7 7,
+		n-resize;
 }
 
 ::-webkit-scrollbar-thumb:horizontal {
-	cursor: url("/assets/images/cursors/cursor_scrollh.png") 7 7, e-resize;
+	cursor:
+		url("/assets/images/cursors/cursor_scrollh.png") 7 7,
+		e-resize;
 }
 
 ::-webkit-scrollbar-button:single-button {
