@@ -54,7 +54,7 @@ let layout =
 					<div>
 						<h2>stats</h2>
 						<ul class="unstyled-ul">
-							<li>views: <i id="stats-views" style="float: right;">...</i></li>
+							<li>visitors: <i id="stats-views" style="float: right;">...</i></li>
 							<li>followers: <i id="stats-followers" style="float: right;">...</i></li>
 						</ul>
 					</div>
