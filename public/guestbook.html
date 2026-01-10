@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
@@ -80,9 +80,6 @@
 		<main class="container" data-maincontent>
 			<h1>guestbook</h1>
 			<div style="display: flex; flex-direction: column; gap: 20px">
-				<div id="message-container">
-					<span style="text-align: center">loading...</span>
-				</div>
 				<div>
 					<div id="guestbook-form">
 						<h2>leave a message</h2>
@@ -107,7 +104,10 @@
 							<button id="send-button" class="btn">send</button>
 						</div>
 					</div>
-					<span>if you want your message removed, feel free to ask in a new message (or send me an email)</span>
+					<span style="color: grey; font-style: italic; font-size: 11px">if you want your message removed, feel free to ask in a new message (or send an email)</span>
+				</div>
+				<div id="message-container">
+					<span style="text-align: center">loading...</span>
 				</div>
 			</div>
 		</main>
