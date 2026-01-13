@@ -145,11 +145,16 @@
 						<span id="message-link"></span>
 						<span style="margin-left: auto; font-style: italic;">${prettyDate} at ${prettyTime}</span>
 					</div>
-					<span id="message-message"></span>
+					<div id="message-message"></span>
 				`;
 
 				messageEl.querySelector("#message-author").textContent = message.author;
-				messageEl.querySelector("#message-message").textContent = message.message;
+				for (const msg of message.message.split("\n")) {
+					const msgSpan = document.createElement("p");
+					msgSpan.innerText = msg;
+					msgSpan.style = "margin: 0px;";
+					messageEl.querySelector("#message-message").appendChild(msgSpan);
+				}
 
 				if (message.link) {
 					// innerhtml is fine because links are validated
