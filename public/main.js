@@ -85,7 +85,7 @@ let layout =
 					<div>
 						<h2>stuff i'm doing</h2>
 						<ul class="unstyled-ul">
-							<li><a href="https://github.com/zaneshaw/fishcove64/" target="_blank" class="link">fishcove64</a></li>
+							<li><a href="https://github.com/zaneshaw/fishcove64/" target="_blank" class="link">fish cove 64</a></li>
 							<li><a href="https://www.youtube.com/@LiamStreamArchive/" target="_blank" class="link">Liam Stream Archive</a></li>
 						</ul>
 					</div>
