@@ -157,8 +157,9 @@
 				}
 
 				if (message.link) {
+					const link = !message.link.startsWith("https://") ? `https://${message.link}` : message.link;
 					// innerhtml is fine because links are validated
-					messageEl.querySelector("#message-link").innerHTML += `<span>(<a href="${message.link}" target="_blank" class="link">${message.link}</a>)</span>`;
+					messageEl.querySelector("#message-link").innerHTML += `<span>(<a href="${link}" target="_blank" class="link">${message.link}</a>)</span>`;
 				}
 
 				return messageEl;
