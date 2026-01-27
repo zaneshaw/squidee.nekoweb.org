@@ -325,11 +325,11 @@ if (!statsLS || Date.now() - (JSON.parse(statsLS)["time_fetched"] || 0) > 60000)
 }
 
 function notifyOutdated() {
-	console.error("you're seeing an outdated version of the website. press ctrl-f5 to update.");
+	console.error("you're seeing an outdated version of the website. press ctrl+shift+r to update.");
 
 	document.body.innerHTML += `<div class="container" id="outdated-notification">
 		<img src="/assets/images/warning.png" />
-		<span>you might be seeing an outdated version of the website! press <b>ctrl-f5</b> to update.</span>
+		<span>you might be seeing an outdated version of the website! press <b>ctrl+shift+r</b> to update.</span>
 	</div>`;
 }
 
