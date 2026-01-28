@@ -1,7 +1,13 @@
 const main = document.querySelector("main");
 const buttonSnippet = `<a href="https://squidee.nekoweb.org" title="zane's site"><img src="https://squidee.nekoweb.org/assets/images/buttons/88x31_squidee.gif"></a>`;
 
-const scripts = ["/scripts/oneko.js", "/scripts/underwater_effect.js", "/scripts/howler.js"];
+const scripts = [
+	"/scripts/oneko.js",
+	"/scripts/underwater_effect.js",
+	"/scripts/howler.js",
+	"https://cdring.neocities.org/cdring/onionring-variables.js",
+	"https://cdring.neocities.org/cdring/onionring-widget.js",
+];
 
 let bgm;
 
@@ -44,9 +50,9 @@ let layout =
 					<a href="/updates.html" id="whats-new">
 						<h2>what's new?</h2>
 						<ul class="unstyled-ul">
+							<li>28-01-26 CDRing</li>
 							<li>10-12-25 stuff page</li>
 							<li>23-11-25 guestbook!!!</li>
-							<li>10-11-25 gallery</li>
 						</ul>
 					</a>
 				</div>
@@ -94,9 +100,6 @@ let layout =
 						<a href="https://pincasplace.neocities.org/" target="_blank" title="pinca's place" class="button-88x31">
 							<img src="https://pincasplace.neocities.org/images/badges/88x31_pinca.gif" alt="pinca's place" />
 						</a>
-						<a href="https://mackos.nekoweb.org/" target="_blank" title="mackOS" class="button-88x31">
-							<span style="background-color: hsl(0, 0%, 80%);">mackOS</span>
-						</a>
 					</div>
 					<div class="button-list">
 						<h2>webrings</h2>
@@ -112,6 +115,10 @@ let layout =
 								src="https://baccyflap.com/noai/miniwidget14.gif"
 								alt="a bluegreen rectangle showing the words the NO AI webring, with NO AI being written by a fountain pen, all in the style of 16 bit Windows 95 icons. to either side are two equally Windows-95-style cursors pointing left and right, softly bouncing up and down. in between it all is a small black question mark"
 							/>
+						</div>
+						<div id="cdr">
+							<script type="text/javascript" src="https://cdring.neocities.org/cdring/onionring-variables.js"></script>
+							<script type="text/javascript" src="https://cdring.neocities.org/cdring/onionring-widget.js"></script>
 						</div>
 					</div>
 					<a href="https://pincasplace.neocities.org/" target="_blank" title="cool squidee poster by pinca" style="margin-top: auto;">
