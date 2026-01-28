@@ -6,7 +6,7 @@ const scripts = [
 	"/scripts/underwater_effect.js",
 	"/scripts/howler.js",
 	"https://cdring.neocities.org/cdring/onionring-variables.js",
-	"https://cdring.neocities.org/cdring/onionring-widget.js",
+	"/scripts/onionring_widget.js",
 ];
 
 let bgm;
@@ -116,13 +116,10 @@ let layout =
 								alt="a bluegreen rectangle showing the words the NO AI webring, with NO AI being written by a fountain pen, all in the style of 16 bit Windows 95 icons. to either side are two equally Windows-95-style cursors pointing left and right, softly bouncing up and down. in between it all is a small black question mark"
 							/>
 						</div>
-						<div id="cdr">
-							<script type="text/javascript" src="https://cdring.neocities.org/cdring/onionring-variables.js"></script>
-							<script type="text/javascript" src="https://cdring.neocities.org/cdring/onionring-widget.js"></script>
-						</div>
+						<div id="cdr"></div>
 					</div>
 					<a href="https://pincasplace.neocities.org/" target="_blank" title="cool squidee poster by pinca" style="margin-top: auto;">
-						<img src="/assets/images/poster.jpeg" id="poster-thing" style="width: 100%;" />
+						<img src="/assets/images/poster.jpeg" id="poster-thing" style="width: 80%;" />
 					</a>
 				</div>
 			</div>

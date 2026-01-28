@@ -582,6 +582,16 @@ footer > #footer-center {
 	transform: rotate(-15deg);
 }
 
+#cdr {
+	width: 88px;
+	padding: 0px;
+	margin: 0px;
+}
+
+#cdr * {
+	margin: 0px !important;
+}
+
 .hide-scrollbar-buttons::-webkit-scrollbar-button {
 	display: none;
 }
