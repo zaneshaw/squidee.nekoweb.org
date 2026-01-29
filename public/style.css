@@ -1,4 +1,5 @@
 @import url("https://cdring.neocities.org/cdring/onionring.css");
+@import url("https://file.garden/ZrZSgsrYfQXsO7QH/ww/webmasterwebring.css");
 
 @font-face {
 	font-family: Inter;
@@ -590,6 +591,10 @@ footer > #footer-center {
 
 #cdr * {
 	margin: 0px !important;
+}
+
+#webmasteringbtn {
+	margin: 0px;
 }
 
 .hide-scrollbar-buttons::-webkit-scrollbar-button {
