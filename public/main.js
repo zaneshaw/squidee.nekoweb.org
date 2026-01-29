@@ -182,7 +182,10 @@ function notifyOutdated() {
 
 	document.body.innerHTML += `<div class="container" id="outdated-notification">
 		<img src="/assets/images/warning.png" />
-		<span>you might be seeing an outdated version of the website! press <b>ctrl+shift+r</b> to update.</span>
+		<div>
+			<p>you're seeing an outdated version of the website! press <b>ctrl+shift+r</b> to update</p>
+			<p>(you might need to do this for every page you visit)</p>
+		</div>
 	</div>`;
 }
 

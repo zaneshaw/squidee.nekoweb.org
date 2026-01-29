@@ -69,7 +69,7 @@ footer {
 
 #outdated-notification {
 	position: absolute;
-	top: 50px;
+	top: 40px;
 	left: 50px;
 	width: max-content;
 	display: flex;
@@ -79,6 +79,19 @@ footer {
 
 #outdated-notification > img {
 	height: 20px;
+}
+
+#outdated-notification {
+	text-align: center;
+}
+
+#outdated-notification p {
+	margin: 0px;
+}
+
+#outdated-notification p:last-child {
+	font-size: 10px;
+	font-style: italic;
 }
 
 #content {
