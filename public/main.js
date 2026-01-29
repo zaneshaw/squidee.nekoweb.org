@@ -1,11 +1,7 @@
 const main = document.querySelector("main");
 const buttonSnippet = `<a href="https://squidee.nekoweb.org" title="zane's site"><img src="https://squidee.nekoweb.org/assets/images/buttons/88x31_squidee.gif"></a>`;
 
-const scripts = [
-	"/scripts/oneko.js",
-	"/scripts/underwater_effect.js",
-	"/scripts/howler.js"
-];
+const scripts = ["/scripts/oneko.js", "/scripts/underwater_effect.js", "/scripts/howler.js"];
 
 let bgm;
 
@@ -83,14 +79,15 @@ let layout =
 						<ul class="unstyled-ul">
 							<li><a href="https://squidee.dev/" target="_blank" class="link">squidee.dev</a></li>
 							<li><a href="https://paste.squidee.dev/" target="_blank" class="link">squid paste</a></li>
-							<li><a href="https://workoutcomposer.squidee.dev/" target="_blank" class="link">workout composer</a></li>
+							<li><a href="https://braidle.squidee.dev/" target="_blank" class="link">braidle</a></li>
 						</ul>
 					</div>
 					<div>
-						<h2>stuff i'm doing</h2>
+						<h2>other stuff</h2>
 						<ul class="unstyled-ul">
 							<li><a href="https://github.com/zaneshaw/fishcove64/" target="_blank" class="link">fish cove 64</a></li>
-							<li><a href="https://www.youtube.com/@LiamStreamArchive/" target="_blank" class="link">Liam Stream Archive</a></li>
+							<li><a href="https://www.youtube.com/@LiamStreamArchive/" target="_blank" class="link">liam stream archive</a></li>
+							<li><a href="https://github.com/zaneshaw/chatforge" target="_blank" class="link">chatforge</a></li>
 						</ul>
 					</div>
 					<div class="button-list">
