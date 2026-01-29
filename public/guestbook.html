@@ -1,145 +1,133 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>zane's guestbook</title>
-		<link rel="stylesheet" type="text/css" href="/style.css" />
-		<link rel="icon" href="/assets/images/zanesquid3_small.png" />
-		<style>
-			#message-container {
-				display: flex;
-				flex-direction: column-reverse;
-				gap: 20px;
-			}
+<!--# layout file="layouts/main.html" -->
+<!--# block name="title" -->zane's guestbook<!--# endblock -->
+<!--# block name="content" -->
+<style>
+	#message-container {
+		display: flex;
+		flex-direction: column-reverse;
+		gap: 20px;
+	}
 
-			#guestbook-form {
+	#guestbook-form {
+		display: flex;
+		flex-direction: column;
+		border: 1px solid black;
+		padding: 10px;
+		gap: 10px;
+
+		> #top-row {
+			display: flex;
+			gap: 10px;
+
+			> label {
 				display: flex;
 				flex-direction: column;
-				border: 1px solid black;
-				padding: 10px;
-				gap: 10px;
+				flex-basis: 0;
 
-				> #top-row {
-					display: flex;
-					gap: 10px;
-
-					> label {
-						display: flex;
-						flex-direction: column;
-						flex-basis: 0;
-
-						> input {
-							width: 100%;
-						}
-					}
-				}
-
-				> #bottom-row {
-					display: flex;
-
-					> label {
-						display: flex;
-						flex-direction: column;
-						flex-grow: 1;
-
-						> input {
-							width: 100%;
-						}
-					}
-				}
-
-				> #send-container {
-					display: flex;
-					justify-content: end;
-					align-items: center;
-					gap: 10px;
-
-					> #send-error {
-						color: red;
-						font-style: italic;
-					}
-
-					> #send-button {
-						width: fit-content;
-					}
-				}
-
-				#message-input {
-					resize: none;
+				> input {
+					width: 100%;
 				}
 			}
-		</style>
-	</head>
-	<body>
-		<noscript class="container warning">
-			<img src="/assets/images/warning.png" alt="warning icon" />
-			<span><b>OOPS!</b> my site won't work without javascript enabled...</span>
-		</noscript>
+		}
 
-		<main class="container" data-maincontent>
-			<h1>guestbook</h1>
-			<div style="display: flex; flex-direction: column; gap: 20px">
-				<div>
-					<div id="guestbook-form">
-						<h2>leave a message</h2>
-						<div id="top-row">
-							<label style="flex-grow: 2">
-								<span>your name/username</span>
-								<input type="text" placeholder="..." id="username-input" />
-							</label>
-							<label style="flex-grow: 3">
-								<span>your personal website (optional)</span>
-								<input type="text" placeholder="or linktree, twitter, etc" id="link-input" />
-							</label>
-						</div>
-						<div id="bottom-row">
-							<label>
-								<span>a message (press enter for new line)</span>
-								<textarea rows="1" placeholder="suggestions and feedback are welcome :)" id="message-input"></textarea>
-							</label>
-						</div>
-						<div id="send-container">
-							<span id="send-error"></span>
-							<button id="send-button" class="btn">send</button>
-						</div>
-					</div>
-					<span style="color: grey; font-style: italic; font-size: 11px">if you want your message removed, feel free to ask in a new message (or send an email)</span>
+		> #bottom-row {
+			display: flex;
+
+			> label {
+				display: flex;
+				flex-direction: column;
+				flex-grow: 1;
+
+				> input {
+					width: 100%;
+				}
+			}
+		}
+
+		> #send-container {
+			display: flex;
+			justify-content: end;
+			align-items: center;
+			gap: 10px;
+
+			> #send-error {
+				color: red;
+				font-style: italic;
+			}
+
+			> #send-button {
+				width: fit-content;
+			}
+		}
+
+		#message-input {
+			resize: none;
+		}
+	}
+</style>
+
+<main class="container">
+	<h1>guestbook</h1>
+	<div style="display: flex; flex-direction: column; gap: 20px">
+		<div>
+			<div id="guestbook-form">
+				<h2>leave a message</h2>
+				<div id="top-row">
+					<label style="flex-grow: 2">
+						<span>your name/username</span>
+						<input type="text" placeholder="..." id="username-input" />
+					</label>
+					<label style="flex-grow: 3">
+						<span>your personal website (optional)</span>
+						<input type="text" placeholder="or linktree, twitter, etc" id="link-input" />
+					</label>
 				</div>
-				<div id="message-container">
-					<span style="text-align: center">loading...</span>
+				<div id="bottom-row">
+					<label>
+						<span>a message (press enter for new line)</span>
+						<textarea rows="1" placeholder="suggestions and feedback are welcome :)" id="message-input"></textarea>
+					</label>
+				</div>
+				<div id="send-container">
+					<span id="send-error"></span>
+					<button id="send-button" class="btn">send</button>
 				</div>
 			</div>
-		</main>
+			<span style="color: grey; font-style: italic; font-size: 11px">if you want your message removed, feel free to ask in a new message (or send an email)</span>
+		</div>
+		<div id="message-container">
+			<span style="text-align: center">loading...</span>
+		</div>
+	</div>
+</main>
 
-		<script src="/main.js"></script>
-		<script>
-			const backendUrl = "https://backend.squidee.dev/api/";
+<script>
+	const backendUrl = "https://backend.squidee.dev/api/";
 
-			const usernameInputEl = document.querySelector("#username-input");
-			const linkInputEl = document.querySelector("#link-input");
-			const messageInputEl = document.querySelector("#message-input");
-			const messageContainerEl = document.querySelector("#message-container");
+	const usernameInputEl = document.querySelector("#username-input");
+	const linkInputEl = document.querySelector("#link-input");
+	const messageInputEl = document.querySelector("#message-input");
+	const messageContainerEl = document.querySelector("#message-container");
 
-			const sendErrorEl = document.querySelector("#send-error");
-			const sendButtonEl = document.querySelector("#send-button");
+	const sendErrorEl = document.querySelector("#send-error");
+	const sendButtonEl = document.querySelector("#send-button");
 
-			function generateMessage(message) {
-				const date = new Date(`${message.created} UTC`);
-				const prettyDate = date.toLocaleDateString("en-AU", {
-					year: "numeric",
-					month: "short",
-					day: "numeric",
-				});
-				const prettyTime = date.toLocaleTimeString("en-AU", {
-					hour: "numeric",
-					minute: "numeric",
-					second: "numeric",
-				});
+	function generateMessage(message) {
+		const date = new Date(`${message.created} UTC`);
+		const prettyDate = date.toLocaleDateString("en-AU", {
+			year: "numeric",
+			month: "short",
+			day: "numeric",
+		});
+		const prettyTime = date.toLocaleTimeString("en-AU", {
+			hour: "numeric",
+			minute: "numeric",
+			second: "numeric",
+		});
 
-				const messageEl = document.createElement("div");
-				messageEl.classList.add("message");
-				messageEl.innerHTML = /* HTML */ `
+		const messageEl = document.createElement("div");
+		messageEl.classList.add("message");
+		messageEl.innerHTML = /* HTML */ `
 					<div style="display: flex; gap: 5px; align-items: center;">
 						<h2 id="message-author"></h2>
 						<span id="message-link"></span>
@@ -148,80 +136,79 @@
 					<div id="message-message"></span>
 				`;
 
-				messageEl.querySelector("#message-author").textContent = message.author;
-				for (const msg of message.message.split("\n")) {
-					const msgSpan = document.createElement("p");
-					msgSpan.innerText = msg;
-					msgSpan.style = "margin: 0px;";
-					messageEl.querySelector("#message-message").appendChild(msgSpan);
-				}
+		messageEl.querySelector("#message-author").textContent = message.author;
+		for (const msg of message.message.split("\n")) {
+			const msgSpan = document.createElement("p");
+			msgSpan.innerText = msg;
+			msgSpan.style = "margin: 0px;";
+			messageEl.querySelector("#message-message").appendChild(msgSpan);
+		}
 
-				if (message.link) {
-					const link = !message.link.startsWith("https://") ? `https://${message.link}` : message.link;
-					// innerhtml is fine because links are validated
-					messageEl.querySelector("#message-link").innerHTML += `<span>(<a href="${link}" target="_blank" class="link">${message.link}</a>)</span>`;
-				}
+		if (message.link) {
+			const link = !message.link.startsWith("https://") ? `https://${message.link}` : message.link;
+			// innerhtml is fine because links are validated
+			messageEl.querySelector("#message-link").innerHTML += `<span>(<a href="${link}" target="_blank" class="link">${message.link}</a>)</span>`;
+		}
 
-				return messageEl;
-			}
+		return messageEl;
+	}
 
-			sendButtonEl.addEventListener("click", () => {
-				// todo: probably needs more validation on the client
-				if (!!usernameInputEl.value && !!messageInputEl.value) {
-					fetch(`${backendUrl}collections/nekoweb_guestbook/records`, {
-						method: "POST",
-						headers: {
-							"Access-Control-Allow-Origin": "*",
-							"Content-Type": "application/json",
-						},
-						body: JSON.stringify({
-							author: usernameInputEl.value,
-							link: linkInputEl.value,
-							message: messageInputEl.value,
-						}),
-					})
-						.then((res) => res.json())
-						.then((data) => {
-							console.debug(data);
-
-							if (data.status) {
-								sendErrorEl.textContent = data.message;
-								return;
-							}
-
-							messageContainerEl.appendChild(generateMessage(data));
-
-							usernameInputEl.value = "";
-							linkInputEl.value = "";
-							messageInputEl.value = "";
-
-							document.querySelector("main").scrollTo(0, 0);
-
-							sendErrorEl.textContent = "";
-						});
-				}
-			});
-
-			document.querySelector("#message-input").addEventListener("input", (e) => {
-				e.target.style.height = "auto";
-				e.target.style.height = `${e.target.scrollHeight + 2}px`;
-			});
-
-			// todo: pagination
-			fetch(`${backendUrl}collections/nekoweb_guestbook/records?sort=created&perPage=999`, {
-				method: "GET",
+	sendButtonEl.addEventListener("click", () => {
+		// todo: probably needs more validation on the client
+		if (!!usernameInputEl.value && !!messageInputEl.value) {
+			fetch(`${backendUrl}collections/nekoweb_guestbook/records`, {
+				method: "POST",
+				headers: {
+					"Access-Control-Allow-Origin": "*",
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify({
+					author: usernameInputEl.value,
+					link: linkInputEl.value,
+					message: messageInputEl.value,
+				}),
 			})
 				.then((res) => res.json())
 				.then((data) => {
 					console.debug(data);
 
-					if (data.items) {
-						messageContainerEl.innerHTML = "";
-						for (const message of data.items) {
-							messageContainerEl.appendChild(generateMessage(message));
-						}
+					if (data.status) {
+						sendErrorEl.textContent = data.message;
+						return;
 					}
+
+					messageContainerEl.appendChild(generateMessage(data));
+
+					usernameInputEl.value = "";
+					linkInputEl.value = "";
+					messageInputEl.value = "";
+
+					document.querySelector("main").scrollTo(0, 0);
+
+					sendErrorEl.textContent = "";
 				});
-		</script>
-	</body>
-</html>
+		}
+	});
+
+	document.querySelector("#message-input").addEventListener("input", (e) => {
+		e.target.style.height = "auto";
+		e.target.style.height = `${e.target.scrollHeight + 2}px`;
+	});
+
+	// todo: pagination
+	fetch(`${backendUrl}collections/nekoweb_guestbook/records?sort=created&perPage=999`, {
+		method: "GET",
+	})
+		.then((res) => res.json())
+		.then((data) => {
+			console.debug(data);
+
+			if (data.items) {
+				messageContainerEl.innerHTML = "";
+				for (const message of data.items) {
+					messageContainerEl.appendChild(generateMessage(message));
+				}
+			}
+		});
+</script>
+<!--# endblock -->

@@ -1,102 +1,89 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>zane's gallery</title>
-		<link rel="stylesheet" type="text/css" href="/style.css" />
-		<link rel="icon" href="/assets/images/zanesquid3_small.png" />
-		<style>
-			#gallery {
-				position: relative;
-				display: grid;
-				grid-template-columns: 1fr 1fr 1fr;
-				gap: 10px;
-			}
+<!--# layout file="layouts/main.html" -->
+<!--# block name="title" -->zane's gallery<!--# endblock -->
+<!--# block name="content" -->
+<style>
+	#gallery {
+		position: relative;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: 10px;
+	}
 
-			#gallery > a {
-				display: flex;
-				align-items: center;
-				width: 100%;
-			}
+	#gallery > a {
+		display: flex;
+		align-items: center;
+		width: 100%;
+	}
 
-			#gallery > a > img {
-				width: 100%;
-				height: min-content;
-				scale: 1;
-				border: 1px solid black;
-				cursor: url("/assets/images/cursors/cursor_pointer.png"), pointer;
+	#gallery > a > img {
+		width: 100%;
+		height: min-content;
+		scale: 1;
+		border: 1px solid black;
+		cursor: url("/assets/images/cursors/cursor_pointer.png"), pointer;
 
-				transition-duration: 150ms;
-			}
+		transition-duration: 150ms;
+	}
 
-			#gallery > a > img:hover {
-				z-index: 1;
-				scale: 1.05;
-			}
-		</style>
-	</head>
-	<body>
-		<noscript class="container warning">
-			<img src="/assets/images/warning.png" alt="warning icon" />
-			<span><b>OOPS!</b> my site won't work without javascript enabled...</span>
-		</noscript>
+	#gallery > a > img:hover {
+		z-index: 1;
+		scale: 1.05;
+	}
+</style>
 
-		<main class="container" data-maincontent style="overflow-x: hidden">
-			<div style="display: flex; justify-content: space-between; align-items: center;">
-				<h1>my gallery of random things</h1>
-				<span>*click to enlarge in a new tab*</span>
-			</div>
-			<div id="gallery">
-				<a><img src="/assets/images/gallery/longdrive13.jpeg" title="the long drive | 20 dec 2025" /></a>
-				<a><img src="/assets/images/gallery/longdrive14.jpeg" title="the long drive | 20 dec 2025" /></a>
-				<a><img src="/assets/images/gallery/longdrive1.jpg" title="the long drive | 20 dec 2025" /></a>
-				<a><img src="/assets/images/gallery/longdrive2.jpg" title="the long drive | 20 dec 2025" /></a>
-				<a><img src="/assets/images/gallery/longdrive3.jpg" title="the long drive | 20 dec 2025" /></a>
-				<a><img src="/assets/images/gallery/longdrive4.jpg" title="the long drive | 20 dec 2025" /></a>
-				<a><img src="/assets/images/gallery/longdrive9.jpg" title="the long drive | 20 dec 2025" /></a>
-				<a><img src="/assets/images/gallery/longdrive5.jpg" title="the long drive | 20 dec 2025" /></a>
-				<a><img src="/assets/images/gallery/longdrive6.jpg" title="the long drive | 20 dec 2025" /></a>
-				<a><img src="/assets/images/gallery/longdrive8.jpg" title="the long drive | 20 dec 2025" /></a>
-				<a><img src="/assets/images/gallery/longdrive10.jpg" title="the long drive | 20 dec 2025" /></a>
-				<a><img src="/assets/images/gallery/longdrive11.jpg" title="the long drive | 20 dec 2025" /></a>
-				<a><img src="/assets/images/gallery/longdrive12.jpg" title="the long drive | 20 dec 2025" /></a>
+<main class="container" data-maincontent style="overflow-x: hidden">
+	<div style="display: flex; justify-content: space-between; align-items: center">
+		<h1>my gallery of random things</h1>
+		<span>*click to enlarge in a new tab*</span>
+	</div>
+	<div id="gallery">
+		<a><img src="/assets/images/gallery/longdrive13.jpeg" title="the long drive | 20 dec 2025" /></a>
+		<a><img src="/assets/images/gallery/longdrive14.jpeg" title="the long drive | 20 dec 2025" /></a>
+		<a><img src="/assets/images/gallery/longdrive1.jpg" title="the long drive | 20 dec 2025" /></a>
+		<a><img src="/assets/images/gallery/longdrive2.jpg" title="the long drive | 20 dec 2025" /></a>
+		<a><img src="/assets/images/gallery/longdrive3.jpg" title="the long drive | 20 dec 2025" /></a>
+		<a><img src="/assets/images/gallery/longdrive4.jpg" title="the long drive | 20 dec 2025" /></a>
+		<a><img src="/assets/images/gallery/longdrive9.jpg" title="the long drive | 20 dec 2025" /></a>
+		<a><img src="/assets/images/gallery/longdrive5.jpg" title="the long drive | 20 dec 2025" /></a>
+		<a><img src="/assets/images/gallery/longdrive6.jpg" title="the long drive | 20 dec 2025" /></a>
+		<a><img src="/assets/images/gallery/longdrive8.jpg" title="the long drive | 20 dec 2025" /></a>
+		<a><img src="/assets/images/gallery/longdrive10.jpg" title="the long drive | 20 dec 2025" /></a>
+		<a><img src="/assets/images/gallery/longdrive11.jpg" title="the long drive | 20 dec 2025" /></a>
+		<a><img src="/assets/images/gallery/longdrive12.jpg" title="the long drive | 20 dec 2025" /></a>
 
-				<a><img src="/assets/images/gallery/rv1.jpeg" title="rv there yet? | 19 dec 2025" /></a>
-				<a><img src="/assets/images/gallery/rv4.jpeg" title="rv there yet? | 12 dec 2025" /></a>
-				<a><img src="/assets/images/gallery/rv3.jpeg" title="rv there yet? | 19 dec 2025" /></a>
-				<a><img src="/assets/images/gallery/rv2.jpeg" title="rv there yet? | 19 dec 2025" /></a>
+		<a><img src="/assets/images/gallery/rv1.jpeg" title="rv there yet? | 19 dec 2025" /></a>
+		<a><img src="/assets/images/gallery/rv4.jpeg" title="rv there yet? | 12 dec 2025" /></a>
+		<a><img src="/assets/images/gallery/rv3.jpeg" title="rv there yet? | 19 dec 2025" /></a>
+		<a><img src="/assets/images/gallery/rv2.jpeg" title="rv there yet? | 19 dec 2025" /></a>
 
-				<a><img src="/assets/images/gallery/peak2.jpeg" title="peak | 10 nov 2025" /></a>
-				<a><img src="/assets/images/gallery/peak1.jpeg" title="peak | 12 jul 2025" /></a>
-				<a><img src="/assets/images/gallery/peak3.jpeg" title="peak | 10 nov 2025" /></a>
-				<a><img src="/assets/images/gallery/peak4.jpeg" title="peak | 10 nov 2025" /></a>
-				<a><img src="/assets/images/gallery/peak5.jpeg" title="peak | 10 nov 2025" /></a>
-				<a><img src="/assets/images/gallery/peak6.jpeg" title="peak | 10 nov 2025" /></a>
-				<a><img src="/assets/images/gallery/peak7.jpeg" title="peak | 10 nov 2025" /></a>
-				<a><img src="/assets/images/gallery/peak8.jpeg" title="peak | 26 jun 2025" /></a>
-				<a><img src="/assets/images/gallery/peak9.jpeg" title="peak | 26 jun 2025" /></a>
-				<a><img src="/assets/images/gallery/peak10.jpeg" title="peak | 1 jul 2025" /></a>
+		<a><img src="/assets/images/gallery/peak2.jpeg" title="peak | 10 nov 2025" /></a>
+		<a><img src="/assets/images/gallery/peak1.jpeg" title="peak | 12 jul 2025" /></a>
+		<a><img src="/assets/images/gallery/peak3.jpeg" title="peak | 10 nov 2025" /></a>
+		<a><img src="/assets/images/gallery/peak4.jpeg" title="peak | 10 nov 2025" /></a>
+		<a><img src="/assets/images/gallery/peak5.jpeg" title="peak | 10 nov 2025" /></a>
+		<a><img src="/assets/images/gallery/peak6.jpeg" title="peak | 10 nov 2025" /></a>
+		<a><img src="/assets/images/gallery/peak7.jpeg" title="peak | 10 nov 2025" /></a>
+		<a><img src="/assets/images/gallery/peak8.jpeg" title="peak | 26 jun 2025" /></a>
+		<a><img src="/assets/images/gallery/peak9.jpeg" title="peak | 26 jun 2025" /></a>
+		<a><img src="/assets/images/gallery/peak10.jpeg" title="peak | 1 jul 2025" /></a>
 
-				<a><img src="/assets/images/gallery/lethal1.jpeg" title="lethal company | 9 jan 2024" /></a>
+		<a><img src="/assets/images/gallery/lethal1.jpeg" title="lethal company | 9 jan 2024" /></a>
 
-				<a><img src="/assets/images/gallery/chained1.jpeg" title="chained together | 1 jan 2025" /></a>
+		<a><img src="/assets/images/gallery/chained1.jpeg" title="chained together | 1 jan 2025" /></a>
 
-				<a><img src="/assets/images/gallery/roblox1.jpeg" title="roblox | 8 jun 2024" /></a>
-				<a><img src="/assets/images/gallery/roblox2.jpeg" title="roblox | 5 jul 2024" /></a>
+		<a><img src="/assets/images/gallery/roblox1.jpeg" title="roblox | 8 jun 2024" /></a>
+		<a><img src="/assets/images/gallery/roblox2.jpeg" title="roblox | 5 jul 2024" /></a>
 
-				<a><img src="/assets/images/gallery/peak11.jpeg" title="peak | 26 jun 2025" /></a>
-			</div>
-		</main>
+		<a><img src="/assets/images/gallery/peak11.jpeg" title="peak | 26 jun 2025" /></a>
+	</div>
+</main>
 
-		<script src="/main.js"></script>
-		<script>
-			const images = document.querySelectorAll("#gallery>a>img");
+<script>
+	const images = document.querySelectorAll("#gallery>a>img");
 
-			for (const image of images) {
-				image.parentElement.href = image.src;
-				image.parentElement.target = "_blank";
-			}
-		</script>
-	</body>
-</html>
+	for (const image of images) {
+		image.parentElement.href = image.src;
+		image.parentElement.target = "_blank";
+	}
+</script>
+<!--# endblock -->

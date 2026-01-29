@@ -1,8 +1,3 @@
-const main = document.querySelector("main");
-const buttonSnippet = `<a href="https://squidee.nekoweb.org" title="zane's site"><img src="https://squidee.nekoweb.org/assets/images/buttons/88x31_squidee.gif"></a>`;
-
-const scripts = ["/scripts/oneko.js", "/scripts/underwater_effect.js", "/scripts/howler.js"];
-
 let bgm;
 
 function applySettings(settings) {
@@ -15,128 +10,6 @@ function applySettings(settings) {
 
 function saveSettings(settings) {
 	window.localStorage.setItem("settings", JSON.stringify(settings));
-}
-
-let layout =
-	/* HTML */
-	`<div id="content">
-			<div id="left">
-				<div class="container">
-					<a href="/index.html" id="hero-image">
-						<img src="/assets/images/zanesquid3_small.png" alt="me with a squid hat" />
-					</a>
-					<div>
-						<h2>my button</h2>
-						<a title="zane's site" class="button-88x31"><img src="/assets/images/buttons/88x31_squidee.gif" alt="squidee" /></a>
-						<textarea rows="3" onclick="this.select()" class="hide-scrollbar-buttons" style="resize: none; width: 100%; word-break: break-all;">${buttonSnippet}</textarea>
-						<span>plz hotlink :&rpar;</span>
-					</div>
-					<div>
-						<h2>sitemap</h2>
-						<ul class="unstyled-ul">
-							<li><a href="/index.html" class="link">me</a></li>
-							<li><a href="/stuff.html" class="link">stuff</a></li>
-							<li><a href="/gallery.html" class="link">gallery</a></li>
-							<li><a href="/guestbook.html" class="link">guestbook</a></li>
-							<li><a href="/updates.html" class="link">updates</a></li>
-						</ul>
-					</div>
-					<a href="/updates.html" id="whats-new">
-						<h2>what's new?</h2>
-						<ul class="unstyled-ul">
-							<li>28-01-26 CDRing</li>
-							<li>10-12-25 stuff page</li>
-							<li>23-11-25 guestbook!!!</li>
-						</ul>
-					</a>
-				</div>
-				<div class="container" style="flex-grow: 0; gap: 5px;">
-					<div>
-						<h2>stats</h2>
-						<ul class="unstyled-ul">
-							<li>visitors: <i id="stats-views" style="float: right;">...</i></li>
-							<li>followers: <i id="stats-followers" style="float: right;">...</i></li>
-						</ul>
-					</div>
-					<iframe src="https://nekoweb.org/frame/follow" id="follow-button"></iframe>
-				</div>
-			</div>
-
-			<div id="center">
-				<nav>
-					<a href="/index.html">me</a>
-					<a href="/stuff.html">stuff</a>
-					<a href="/gallery.html">gallery</a>
-					<a href="/guestbook.html">guestbook</a>
-				</nav>
-				%COOL MAIN CONTENT%
-			</div>
-
-			<div id="right">
-				<div class="container">
-					<div>
-						<h2>other sites</h2>
-						<ul class="unstyled-ul">
-							<li><a href="https://squidee.dev/" target="_blank" class="link">squidee.dev</a></li>
-							<li><a href="https://paste.squidee.dev/" target="_blank" class="link">squid paste</a></li>
-							<li><a href="https://braidle.squidee.dev/" target="_blank" class="link">braidle</a></li>
-						</ul>
-					</div>
-					<div>
-						<h2>other stuff</h2>
-						<ul class="unstyled-ul">
-							<li><a href="https://github.com/zaneshaw/fishcove64/" target="_blank" class="link">fish cove 64</a></li>
-							<li><a href="https://www.youtube.com/@LiamStreamArchive/" target="_blank" class="link">liam stream archive</a></li>
-							<li><a href="https://github.com/zaneshaw/chatforge" target="_blank" class="link">chatforge</a></li>
-						</ul>
-					</div>
-					<div class="button-list">
-						<h2>friends</h2>
-						<a href="https://pincasplace.neocities.org/" target="_blank" title="pinca's place" class="button-88x31">
-							<img src="https://pincasplace.neocities.org/images/badges/88x31_pinca.gif" alt="pinca's place" />
-						</a>
-					</div>
-					<a href="https://pincasplace.neocities.org/" target="_blank" title="cool squidee poster by pinca" style="margin-top: auto;">
-						<img src="/assets/images/poster.jpeg" id="poster-thing" style="width: 100%;" />
-					</a>
-				</div>
-			</div>
-		</div>
-
-		<footer class="container">
-			<a href="http://www.acasystems.com/en/button-maker/" target="_blank">
-				<img src="/assets/images/buttons/80x15_human_made.png" alt="human made 80x15 button" style="image-rendering: pixelated;" />
-			</a>
-			<div id="footer-center">
-				<span>🦑</span>
-				<span class="link" id="bgm-toggle">bgm: <span id="bgm-name">???</span> <span id="bgm-mute-icon">🔊</span></span>
-				<span>🦑</span>
-				<span class="link" id="squid-toggle">hide the squid</span>
-				<span>🦑</span>
-			</div>
-			<div id="oneko-spawn"></div>
-		</footer>
-
-		<div id="screen-overlay">
-			<div id="underwater-effect"></div>
-			<div id="crt"></div>
-		</div>
-		<div id="screen-underlay">
-			<div class="water"><div></div></div>
-			<div class="water" id="water-two"><div></div></div>
-			<div id="squid"></div>
-		</div>`;
-
-if (main.dataset["maincontent"] != undefined) {
-	delete main.dataset["maincontent"];
-	layout = layout.replace("%COOL MAIN CONTENT%", main.outerHTML);
-	main.outerHTML = layout;
-
-	for (const src of scripts) {
-		const script = document.createElement("script");
-		script.src = src;
-		document.body.appendChild(script);
-	}
 }
 
 const defaultSettings = {
@@ -239,8 +112,6 @@ function processSquid() {
 }
 
 setInterval(processSquid, 40);
-
-document.body.style.visibility = "visible";
 
 const bgmToggle = document.getElementById("bgm-toggle");
 const bgmVolume = 0.05;

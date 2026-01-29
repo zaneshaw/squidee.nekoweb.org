@@ -1,87 +1,73 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>zane's stuff</title>
-		<link rel="stylesheet" type="text/css" href="/style.css" />
-		<link rel="icon" href="/assets/images/zanesquid3_small.png" />
-		<style>
-			#stuff {
-				display: flex;
-				flex-direction: row;
-				gap: 10px;
-				padding-right: 10px;
-			}
+<!--# layout file="layouts/main.html" -->
+<!--# block name="title" -->zane's stuff<!--# endblock -->
+<!--# block name="content" -->
+<style>
+	#stuff {
+		display: flex;
+		flex-direction: row;
+		gap: 10px;
+		padding-right: 10px;
+	}
 
-			#stuff * {
-				max-width: 100%;
-			}
+	#stuff * {
+		max-width: 100%;
+	}
 
-			#stuff p {
-				margin: 5px 0px;
-			}
+	#stuff p {
+		margin: 5px 0px;
+	}
 
-			#stuff .links {
-				display: flex;
-				gap: 10px;
-				float: right;
-			}
+	#stuff .links {
+		display: flex;
+		gap: 10px;
+		float: right;
+	}
 
-			#stuff > div {
-				display: flex;
-				flex-direction: column;
-				gap: 10px;
+	#stuff > div {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
 
-				flex-grow: 1;
-				flex-basis: 0;
-			}
-		</style>
-	</head>
-	<body>
-		<noscript class="container warning">
-			<img src="/assets/images/warning.png" alt="warning icon" />
-			<span><b>OOPS!</b> my site won't work without javascript enabled...</span>
-		</noscript>
+		flex-grow: 1;
+		flex-basis: 0;
+	}
+</style>
 
-		<main id="stuff" data-maincontent>
-			<div>
-				<div class="container">
-					<h1>Fish Cove 64</h1>
-					<p>secret n64 project.</p>
-					<img src="/assets/images/stuff/fishcove64.jpeg" alt="Fish Cove 64 blurred screenshot" />
-					<div class="links">
-						<a href="https://github.com/zaneshaw/fishcove64/" target="_blank" class="link">source</a>
-					</div>
-				</div>
-				<div class="container">
-					<h1>squidpaste</h1>
-					<p>free, anonymous service for hosting plain text. yummy. the server is closed source.</p>
-					<a href="https://paste.squidee.dev/" target="_blank"><img src="/assets/images/stuff/squidpaste.png" alt="squidpaste screenshot" /></a>
-					<div class="links">
-						<a href="https://github.com/zaneshaw/squidpaste" target="_blank" class="link">source</a>
-						<a href="https://paste.squidee.dev/" target="_blank" class="link">link</a>
-					</div>
-				</div>
+<main id="stuff" data-maincontent>
+	<div>
+		<div class="container">
+			<h1>Fish Cove 64</h1>
+			<p>secret n64 project.</p>
+			<img src="/assets/images/stuff/fishcove64.jpeg" alt="Fish Cove 64 blurred screenshot" />
+			<div class="links">
+				<a href="https://github.com/zaneshaw/fishcove64/" target="_blank" class="link">source</a>
 			</div>
-			<div>
-				<div class="container">
-					<h1>Liam Search</h1>
-					<p>a simple search engine for a streamer's stream transcripts.</p>
-					<a href="https://liamsear.ch/" target="_blank"><img src="/assets/images/stuff/liamsearch.jpeg" alt="Liam Search screenshot" /></a>
-					<div class="links">
-						<a href="https://github.com/zaneshaw/liam-search" target="_blank" class="link">source</a>
-						<a href="https://liamsear.ch/" target="_blank" class="link">link</a>
-					</div>
-				</div>
-				<div class="container">
-					<h1>Sanctuary 64</h1>
-					<p>demo i made to learn how to develop a game for the nintendo 64. not public.</p>
-					<img src="/assets/images/stuff/sanctuary64.jpeg" alt="Sanctuary 64 cartridge label" />
-				</div>
+		</div>
+		<div class="container">
+			<h1>squidpaste</h1>
+			<p>free, anonymous service for hosting plain text. yummy. the server is closed source.</p>
+			<a href="https://paste.squidee.dev/" target="_blank"><img src="/assets/images/stuff/squidpaste.png" alt="squidpaste screenshot" /></a>
+			<div class="links">
+				<a href="https://github.com/zaneshaw/squidpaste" target="_blank" class="link">source</a>
+				<a href="https://paste.squidee.dev/" target="_blank" class="link">link</a>
 			</div>
-		</main>
-
-		<script src="/main.js"></script>
-	</body>
-</html>
+		</div>
+	</div>
+	<div>
+		<div class="container">
+			<h1>Liam Search</h1>
+			<p>a simple search engine for a streamer's stream transcripts.</p>
+			<a href="https://liamsear.ch/" target="_blank"><img src="/assets/images/stuff/liamsearch.jpeg" alt="Liam Search screenshot" /></a>
+			<div class="links">
+				<a href="https://github.com/zaneshaw/liam-search" target="_blank" class="link">source</a>
+				<a href="https://liamsear.ch/" target="_blank" class="link">link</a>
+			</div>
+		</div>
+		<div class="container">
+			<h1>Sanctuary 64</h1>
+			<p>demo i made to learn how to develop a game for the nintendo 64. not public.</p>
+			<img src="/assets/images/stuff/sanctuary64.jpeg" alt="Sanctuary 64 cartridge label" />
+		</div>
+	</div>
+</main>
+<!--# endblock -->
