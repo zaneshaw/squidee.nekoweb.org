@@ -114,7 +114,7 @@ function processSquid() {
 setInterval(processSquid, 40);
 
 const bgmToggle = document.getElementById("bgm-toggle");
-const bgmVolume = 0.05;
+const bgmVolume = 0.015;
 const bgmTracks = [
 	{ name: "波", path: "/assets/sounds/波_16k.opus" },
 	{ name: "aqua alaganza", path: "/assets/sounds/aqua_alaganza_16k.opus" },
