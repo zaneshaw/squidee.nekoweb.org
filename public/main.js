@@ -4,9 +4,7 @@ const buttonSnippet = `<a href="https://squidee.nekoweb.org" title="zane's site"
 const scripts = [
 	"/scripts/oneko.js",
 	"/scripts/underwater_effect.js",
-	"/scripts/howler.js",
-	"https://cdring.neocities.org/cdring/onionring-variables.js",
-	"/scripts/onionring_widget.js",
+	"/scripts/howler.js"
 ];
 
 let bgm;
@@ -101,25 +99,8 @@ let layout =
 							<img src="https://pincasplace.neocities.org/images/badges/88x31_pinca.gif" alt="pinca's place" />
 						</a>
 					</div>
-					<div class="button-list">
-						<h2>webrings</h2>
-						<div style="display: flex; align-items: center; gap: 10px; flex-direction: row-reverse; width: min-content; image-rendering: pixelated;">
-							<map name="noaimini14">
-								<area href="https://baccyflap.com/noai" shape="rect" coords="21,0,47,30" target="_blank" alt="no ai webring" title="no ai webring" />
-								<area href="https://baccyflap.com/noai/?prv&s=sqd" target="_top" shape="rect" coords="1,13,19,29" alt="previous" title="previous" />
-								<area href="https://baccyflap.com/noai/?rnd" target="_top" shape="rect" coords="59,7,66,16" alt="random" title="random" />
-								<area href="https://baccyflap.com/noai/?nxt&s=sqd" target="_top" shape="rect" coords="68,1,86,17" alt="next" title="next" />
-							</map>
-							<img
-								usemap="#noaimini14"
-								src="https://baccyflap.com/noai/miniwidget14.gif"
-								alt="a bluegreen rectangle showing the words the NO AI webring, with NO AI being written by a fountain pen, all in the style of 16 bit Windows 95 icons. to either side are two equally Windows-95-style cursors pointing left and right, softly bouncing up and down. in between it all is a small black question mark"
-							/>
-						</div>
-						<div id="cdr"></div>
-					</div>
 					<a href="https://pincasplace.neocities.org/" target="_blank" title="cool squidee poster by pinca" style="margin-top: auto;">
-						<img src="/assets/images/poster.jpeg" id="poster-thing" style="width: 80%;" />
+						<img src="/assets/images/poster.jpeg" id="poster-thing" style="width: 100%;" />
 					</a>
 				</div>
 			</div>

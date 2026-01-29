@@ -36,6 +36,7 @@
 	// build widget HTML
 	var widgetHTML = "<div class='cdr-container'>";
 	widgetHTML += "<div class='cdr-widget'>";
+	widgetHTML += "<p><strong><a href='" + indexURL + "'>CDRing</a></strong></p>";
 
 	// Prev / Image / Next row
 	widgetHTML += "<div class='cdr-nav'>";
