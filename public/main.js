@@ -159,24 +159,6 @@ window.addEventListener("load", () => {
 	});
 });
 
-const statsLS = window.localStorage.getItem("stats");
-if (statsLS) {
-	const stats = JSON.parse(statsLS);
-	document.getElementById("stats-views").innerText = stats.views;
-	document.getElementById("stats-followers").innerText = stats.followers;
-}
-
-if (!statsLS || Date.now() - (JSON.parse(statsLS)["time_fetched"] || 0) > 60000) {
-	fetch("https://nekoweb.org/api/site/info/squidee.nekoweb.org")
-		.then((res) => res.json())
-		.then((json) => {
-			document.getElementById("stats-views").innerText = json.views;
-			document.getElementById("stats-followers").innerText = json.followers;
-
-			window.localStorage.setItem("stats", JSON.stringify({ time_fetched: Date.now(), views: json.views, followers: json.followers }));
-		});
-}
-
 function notifyOutdated() {
 	console.error("you're seeing an outdated version of the website. press ctrl+shift+r to update.");
 
