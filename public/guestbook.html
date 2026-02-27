@@ -96,11 +96,7 @@
 			<span style="color: grey; font-style: italic; font-size: 11px">if you want your message removed, feel free to ask in a new message (or send an email)</span>
 		</div>
 		<div id="message-container">
-			<!-- <span style="text-align: center">loading...</span> -->
-			<div style="text-align: center">
-				<p>temporarily down as i need to replace my server's failing hard drive</p>
-				<p>(26 feb 2026)</p>
-			</div>
+			<span style="text-align: center">loading...</span>
 		</div>
 	</div>
 </main>
@@ -200,19 +196,19 @@
 	});
 
 	// todo: pagination
-	// fetch(`${backendUrl}collections/nekoweb_guestbook/records?sort=created&perPage=999`, {
-	// 	method: "GET",
-	// })
-	// 	.then((res) => res.json())
-	// 	.then((data) => {
-	// 		console.debug(data);
+	fetch(`${backendUrl}collections/nekoweb_guestbook/records?sort=created&perPage=999`, {
+		method: "GET",
+	})
+		.then((res) => res.json())
+		.then((data) => {
+			console.debug(data);
 
-	// 		if (data.items) {
-	// 			messageContainerEl.innerHTML = "";
-	// 			for (const message of data.items) {
-	// 				messageContainerEl.appendChild(generateMessage(message));
-	// 			}
-	// 		}
-	// 	});
+			if (data.items) {
+				messageContainerEl.innerHTML = "";
+				for (const message of data.items) {
+					messageContainerEl.appendChild(generateMessage(message));
+				}
+			}
+		});
 </script>
 <!--# endblock -->
