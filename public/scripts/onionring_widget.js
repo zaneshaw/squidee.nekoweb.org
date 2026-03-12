@@ -1,14 +1,14 @@
 // based on onionring-widget.js
 // CDRing webring widget
-// expects `sites` (array of { url, image }) from onionring-variables.js
+// expects `cdringSites` (array of { url, image }) from onionring-variables.js
 
 (function () {
 	// make sure container exists
 	var container = document.getElementById("cdr");
-	if (!container || !window.sites) return;
+	if (!container || !window.cdringSites) return;
 
 	// figure out which site youre on
-	var currentIndex = sites.findIndex((site) => site.url == "https://squidee.nekoweb.org");
+	var currentIndex = cdringSites.findIndex((site) => site.url == "https://squidee.nekoweb.org");
 
 	// if site is NOT in the ring, show error message
 	if (currentIndex === -1) {
@@ -20,15 +20,15 @@
 		return;
 	}
 
-	var currentSite = sites[currentIndex];
+	var currentSite = cdringSites[currentIndex];
 
 	// figure out prev / next (wrap around)
-	var prevIndex = (currentIndex - 1 + sites.length) % sites.length;
-	var nextIndex = (currentIndex + 1) % sites.length;
+	var prevIndex = (currentIndex - 1 + cdringSites.length) % cdringSites.length;
+	var nextIndex = (currentIndex + 1) % cdringSites.length;
 
-	var prevURL = sites[prevIndex].url;
-	var nextURL = sites[nextIndex].url;
-	var randomURL = sites[Math.floor(Math.random() * sites.length)].url;
+	var prevURL = cdringSites[prevIndex].url;
+	var nextURL = cdringSites[nextIndex].url;
+	var randomURL = cdringSites[Math.floor(Math.random() * cdringSites.length)].url;
 
 	// url for the index page
 	var indexURL = "https://cdring.neocities.org/";
